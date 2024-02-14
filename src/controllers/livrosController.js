@@ -84,7 +84,6 @@ class LivroController {
             const livrosResultado = await livros.find({ "editora": editora });
 
             if (livrosResultado !== null) {
-                console.log(livrosResultado);
                 res.status(200).json(livrosResultado);
             } else {
                 next(new NaoEncontrado("Nenhum livro localizado neste ID"));
